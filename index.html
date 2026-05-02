@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banklogo">
+        <img src="./StateBankofPakistan-CS-logo.png" alt="Logo">
+        <h1>ATM Machine</h1>
+    </div>
+
+    <div class="atm-container">
+        <div class="screen" id="pinScreen">
+            <h2>Enter PIN</h2>
+            <input type="password" id="pin" placeholder="Enter your PIN">
+            <br><br>
+            <button onclick="checkPin()">Enter</button>
+            <p id="error"></p>
+        </div>
+
+        <div class="screen" id="menuScreen" style="display:none;">
+            <h2>Welcome</h2>
+            <p>Select Option</p>
+            <div class="menu-buttons">
+                <button onclick="withdraw()">💰 Withdraw</button>
+                <button onclick="deposit()">➕ Deposit</button>
+                <button onclick="checkBalance()">📊 Balance</button>
+                <button onclick="exitATM()">🚪 Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
